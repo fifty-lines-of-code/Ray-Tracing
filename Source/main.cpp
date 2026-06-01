@@ -8,7 +8,7 @@
 int main()
 {
 	Scene s;
-	SceneFactory::GenerateSinglePlaneAndSingleSquareScene(s);
+	SceneFactory::GenerateSingleSphereAndSingleSquareScene(s);
 
 	RayTracer r;
 	r.RayTrace(640, 480, s);

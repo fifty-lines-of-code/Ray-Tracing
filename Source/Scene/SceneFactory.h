@@ -42,4 +42,31 @@ public:
 		scene.AddGeometry(p);
 		scene.AddGeometry(s);
 	}
+
+	static void GenerateSingleSphereScene(Scene& scene) {
+		Sphere* s = SceneGeometryFactory::GenerateSphere(
+			Point(0, 0, -8),
+			RGBColor(1, 0, 0),
+			100
+		);
+		scene.AddGeometry(s);
+	}
+
+	static void GenerateSingleSphereAndSingleSquareScene(Scene& scene) {
+		Sphere* sp = SceneGeometryFactory::GenerateSphere(
+			Point(0, 0, -8),
+			RGBColor(1, 0, 0),
+			100
+		);
+
+		Square* sq = SceneGeometryFactory::GenerateSquare(
+			Point(0, 0, -10),
+			Vector(0, 0, 1),
+			RGBColor(0, 1, 0),
+			100
+		);
+
+		scene.AddGeometry(sp);
+		scene.AddGeometry(sq);
+	}
 };

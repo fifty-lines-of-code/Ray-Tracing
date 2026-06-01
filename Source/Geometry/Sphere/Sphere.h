@@ -6,7 +6,7 @@
 class Sphere : public IGeometricObject {
 public:
 	Sphere();
-	Sphere(Point _p, float _r, RGBColor _c);
+	Sphere(Point _p, RGBColor _c, float _r);
 	~Sphere();
 
 	bool HitTest(const Ray& ray, float& t, const float& tMin) override;
