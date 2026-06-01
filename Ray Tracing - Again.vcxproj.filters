@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Ray">
+      <UniqueIdentifier>{0136ae99-cbf0-4e45-96a5-e466e367f358}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Ray">
+      <UniqueIdentifier>{fdf5d743-b748-442d-8d1e-ac5aaa3f0759}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Math">
+      <UniqueIdentifier>{5828b477-7daf-4a8c-982d-e481a1bec641}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Geometry">
+      <UniqueIdentifier>{cfa6d0e8-e198-4103-9715-3b79851d68c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Math">
+      <UniqueIdentifier>{745c55c6-3c08-4632-81ed-2d768f748dc4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Geometry">
+      <UniqueIdentifier>{b4aca766-9e78-466a-8a89-3ce982b6e738}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Math\Point">
+      <UniqueIdentifier>{2ab97d04-b372-4205-8eab-e687334d075e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Math\Vector">
+      <UniqueIdentifier>{0ffb06be-69ce-433f-b140-552d33c388a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Math\Point">
+      <UniqueIdentifier>{7f37ef61-9e7e-4a72-97a7-1fc3b471b0b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Math\Vector">
+      <UniqueIdentifier>{58a08f2e-ff9f-46b1-9031-33489cb6dc6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Geometry\Plane">
+      <UniqueIdentifier>{2e24188f-63e3-4342-beb4-1b7854333630}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Geometry\Plane">
+      <UniqueIdentifier>{66297578-af8c-4207-a3f7-9b4097d8faa5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Math\Normal">
+      <UniqueIdentifier>{f4ac7220-f2d7-4a72-bbf9-b5f7e224270d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Math\Normal">
+      <UniqueIdentifier>{7b7509d2-8bb5-40f5-acf1-f53b3a06337e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Math\RGB Color">
+      <UniqueIdentifier>{6388a19a-c697-48fd-b45b-35e849bcafd0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Math\RGB Color">
+      <UniqueIdentifier>{91b5e800-f020-47a4-9318-421b1292b358}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Scene">
+      <UniqueIdentifier>{fa0a406c-1306-472e-a0fb-4744ba20946e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Scene">
+      <UniqueIdentifier>{7b1b5317-6443-4761-853b-bcbcde750067}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Ray Tracing Image">
+      <UniqueIdentifier>{224b8583-a8be-4bed-b02b-a4209b1c0e57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Ray Tracing Image">
+      <UniqueIdentifier>{c03c96b0-355e-44d1-a67a-89735e231931}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Ray Tracer">
+      <UniqueIdentifier>{d40a316c-280e-432d-b796-c892978a3fef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Ray Tracer">
+      <UniqueIdentifier>{03c2f3a6-398a-4543-b170-f357463b89a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Geometry\Sphere">
+      <UniqueIdentifier>{4dd16805-4127-4a59-bec6-deca99923aec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Geometry\Sphere">
+      <UniqueIdentifier>{890fd4f4-5df7-4b10-bb38-a233428f5c99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Geometry\Square">
+      <UniqueIdentifier>{25c04f69-8688-477a-b679-7e6e684a0c9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Geometry\Square">
+      <UniqueIdentifier>{a0a88e56-3eb9-4155-9d85-bb3a65924911}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\Ray\Ray.cpp">
+      <Filter>Source Files\Ray</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Math\Point\Point.cpp">
+      <Filter>Source Files\Math\Point</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Math\Vector\Vector.cpp">
+      <Filter>Source Files\Math\Vector</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Geometry\IGeometricObject.cpp">
+      <Filter>Source Files\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Geometry\Plane\Plane.cpp">
+      <Filter>Source Files\Geometry\Plane</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Math\Normal\Normal.cpp">
+      <Filter>Source Files\Math\Normal</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Math\RGB Color\RGBColor.cpp">
+      <Filter>Source Files\Math\RGB Color</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Scene\Scene.cpp">
+      <Filter>Source Files\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Ray Tracing Image\RayTracingImage.cpp">
+      <Filter>Source Files\Ray Tracing Image</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Ray Tracer\RayTracer.cpp">
+      <Filter>Source Files\Ray Tracer</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Geometry\Sphere\Sphere.cpp">
+      <Filter>Source Files\Geometry\Sphere</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Geometry\Square\Square.cpp">
+      <Filter>Source Files\Geometry\Square</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\Ray\Ray.h">
+      <Filter>Header Files\Ray</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Math\MathInclude.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Math\Point\Point.h">
+      <Filter>Header Files\Math\Point</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Math\Vector\Vector.h">
+      <Filter>Header Files\Math\Vector</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Geometry\IGeometricObject.h">
+      <Filter>Header Files\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Geometry\Plane\Plane.h">
+      <Filter>Header Files\Geometry\Plane</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Math\Normal\Normal.h">
+      <Filter>Header Files\Math\Normal</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Math\RGB Color\RGBColor.h">
+      <Filter>Header Files\Math\RGB Color</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Scene\SceneFactory.h">
+      <Filter>Header Files\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Scene\Scene.h">
+      <Filter>Header Files\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Scene\SceneGeometryFactory.h">
+      <Filter>Header Files\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Ray Tracing Image\RayTracingImage.h">
+      <Filter>Header Files\Ray Tracing Image</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Ray Tracer\RayTracer.h">
+      <Filter>Header Files\Ray Tracer</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Geometry\Sphere\Sphere.h">
+      <Filter>Header Files\Geometry\Sphere</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Geometry\Square\Square.h">
+      <Filter>Header Files\Geometry\Square</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
