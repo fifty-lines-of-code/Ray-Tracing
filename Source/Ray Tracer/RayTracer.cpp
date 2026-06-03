@@ -4,6 +4,7 @@
 #include "../Helper/Helper.h"
 #include "../Ray/Ray.h"
 #include "../Ray Tracing Image/RayTracingImage.h"
+#include "../Sampler/Sampler.h"
 #include <limits>
 
 RayTracer::RayTracer() {}
@@ -14,40 +15,39 @@ void RayTracer::RayTrace(int width, int height, int noSamples, Scene& scene) {
 	ResetColorArray();
 	SetupColorArray(width, height);
 
-	float tMin = 0.001;
+	float tMin = 0.001f;
 	Point origin;
 	Vector direction = Vector(0, 0, -1).Normalize();
-	int n = (int)std::sqrt(noSamples);
+
+	Sampler sampler(noSamples);
 
 	// generate ray origins
 	for (int y = 0; y < height; ++y) { // vertical
 		for (int x = 0; x < width; ++x) { // horizontal
 
 			RGBColor accumulatedColor(0.f);
+			int pixelIndex = y * width + x;
 
-			for (int p = 0; p < n; ++p) { // subpixel row
-				for (int q = 0; q < n; ++q) { // subpixel col
-					// reset color
-					RGBColor sampleColor(0.f);
-					// reset t
-					float t = FLT_MAX;
+			for (int i = 0; i < noSamples; ++i) {
+				// reset color
+				RGBColor sampleColor(0.f);
+				// reset t
+				float t = FLT_MAX;
 
-					// calculte ray origin
-					float subPixelX;
-					float subPixelY;
-					
-					//SubPixelXY_RegularSampling(x, y, p, q, n, subPixelX, subPixelY);
-					SubPixelXY_Jittered_Sampling(x, y, p, q, n, subPixelX, subPixelY);
+				SamplerPoint2D offset = sampler.GetSample(pixelIndex, i);
 
-					// calculate ray origin
-					CalculateRayOrigin(subPixelX, subPixelY, width, height, origin);
-					Ray ray = Ray(origin, direction);
+				// calculte ray origin
+				float subPixelX = x + offset.x;
+				float subPixelY = y + offset.y;
 
-					// run raytrace for the scene
-					scene.RayTrace(ray, t, tMin, sampleColor);
+				// calculate ray origin
+				CalculateRayOrigin(subPixelX, subPixelY, width, height, origin);
+				Ray ray = Ray(origin, direction);
 
-					accumulatedColor += sampleColor;
-				}
+				// run raytrace for the scene
+				scene.RayTrace(ray, t, tMin, sampleColor);
+
+				accumulatedColor += sampleColor;
 			}
 
 			accumulatedColor /= (float)noSamples;

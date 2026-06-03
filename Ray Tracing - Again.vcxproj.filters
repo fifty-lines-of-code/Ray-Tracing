@@ -49,12 +49,6 @@
     <Filter Include="Source Files\Geometry\Plane">
       <UniqueIdentifier>{66297578-af8c-4207-a3f7-9b4097d8faa5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Math\Normal">
-      <UniqueIdentifier>{f4ac7220-f2d7-4a72-bbf9-b5f7e224270d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Math\Normal">
-      <UniqueIdentifier>{7b7509d2-8bb5-40f5-acf1-f53b3a06337e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Math\RGB Color">
       <UniqueIdentifier>{6388a19a-c697-48fd-b45b-35e849bcafd0}</UniqueIdentifier>
     </Filter>
@@ -94,6 +88,12 @@
     <Filter Include="Header Files\Helper">
       <UniqueIdentifier>{a5732c4f-0db7-4ec3-a695-a2fe4f36493e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Sampler">
+      <UniqueIdentifier>{eb336e21-0b28-4889-a9d5-04aebaed75ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sampler">
+      <UniqueIdentifier>{07f1641b-349a-4f03-b4e8-2313749237df}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Ray\Ray.cpp">
@@ -110,9 +110,6 @@
     </ClCompile>
     <ClCompile Include="Source\Geometry\Plane\Plane.cpp">
       <Filter>Source Files\Geometry\Plane</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Math\Normal\Normal.cpp">
-      <Filter>Source Files\Math\Normal</Filter>
     </ClCompile>
     <ClCompile Include="Source\Math\RGB Color\RGBColor.cpp">
       <Filter>Source Files\Math\RGB Color</Filter>
@@ -135,6 +132,9 @@
     <ClCompile Include="Source\Geometry\Square\Square.cpp">
       <Filter>Source Files\Geometry\Square</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Sampler\Sampler.cpp">
+      <Filter>Source Files\Sampler</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Ray\Ray.h">
@@ -154,9 +154,6 @@
     </ClInclude>
     <ClInclude Include="Source\Geometry\Plane\Plane.h">
       <Filter>Header Files\Geometry\Plane</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Math\Normal\Normal.h">
-      <Filter>Header Files\Math\Normal</Filter>
     </ClInclude>
     <ClInclude Include="Source\Math\RGB Color\RGBColor.h">
       <Filter>Header Files\Math\RGB Color</Filter>
@@ -184,6 +181,9 @@
     </ClInclude>
     <ClInclude Include="Source\Helper\Helper.h">
       <Filter>Header Files\Helper</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Sampler\Sampler.h">
+      <Filter>Header Files\Sampler</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

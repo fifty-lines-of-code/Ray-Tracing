@@ -10,7 +10,7 @@ int main()
 	Scene s;
 	SceneFactory::GenerateSingleSphereAndSingleSquareScene(s);
 
-	int noSamples = 9;
+	int noSamples = 25;
 
 	RayTracer r;
 	r.RayTrace(640, 480, noSamples, s);
