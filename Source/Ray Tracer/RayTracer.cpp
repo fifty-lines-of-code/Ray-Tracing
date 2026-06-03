@@ -1,6 +1,7 @@
 #include "RayTracer.h"
 
 #include <cmath>
+#include "../Helper/Helper.h"
 #include "../Ray/Ray.h"
 #include "../Ray Tracing Image/RayTracingImage.h"
 #include <limits>
@@ -32,8 +33,13 @@ void RayTracer::RayTrace(int width, int height, int noSamples, Scene& scene) {
 					float t = FLT_MAX;
 
 					// calculte ray origin
-					float subPixelX = x + (0.5f + q) / n;
-					float subPixelY = y + (0.5f + p) / n;
+					float subPixelX;
+					float subPixelY;
+					
+					//SubPixelXY_RegularSampling(x, y, p, q, n, subPixelX, subPixelY);
+					SubPixelXY_Jittered_Sampling(x, y, p, q, n, subPixelX, subPixelY);
+
+					// calculate ray origin
 					CalculateRayOrigin(subPixelX, subPixelY, width, height, origin);
 					Ray ray = Ray(origin, direction);
 
@@ -81,4 +87,14 @@ void RayTracer::CalculateRayOrigin(float x, float y, int width, int height, Poin
 	o.x = x - 0.5 * (width - 1);
 	o.y = 0.5 * (height - 1) - y; // gotta flip the y to ensure image is not rendered upside down
 	o.z = 100.f; // always hard coded
+}
+
+void RayTracer::SubPixelXY_RegularSampling(const int x, const int y, const int p, const int q, const int n, float& subPixelX, float& subPixelY) {
+	subPixelX = x + (0.5f + q) / n;
+	subPixelY = y + (0.5f + p) / n;
+}
+
+void RayTracer::SubPixelXY_Jittered_Sampling(const int x, const int y, const int p, const int q, const int n, float& subPixelX, float& subPixelY) {
+	subPixelX = x + (Helper::rand_float() + q) / n;
+	subPixelY = y + (Helper::rand_float() + p) / n;
 }

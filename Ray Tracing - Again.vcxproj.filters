@@ -91,6 +91,9 @@
     <Filter Include="Source Files\Geometry\Square">
       <UniqueIdentifier>{a0a88e56-3eb9-4155-9d85-bb3a65924911}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Helper">
+      <UniqueIdentifier>{a5732c4f-0db7-4ec3-a695-a2fe4f36493e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Ray\Ray.cpp">
@@ -178,6 +181,9 @@
     </ClInclude>
     <ClInclude Include="Source\Geometry\Square\Square.h">
       <Filter>Header Files\Geometry\Square</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Helper\Helper.h">
+      <Filter>Header Files\Helper</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
