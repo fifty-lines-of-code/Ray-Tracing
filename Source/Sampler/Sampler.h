@@ -10,18 +10,20 @@ struct SamplerPoint2D {
 };
 
 class Sampler {
-private:
+
+public:
+    Sampler(int numSamples, int numSets);
+    virtual ~Sampler();
+
+    int GetNumberOfSamples() const noexcept;
+    // Securely grab a pre-baked sample offset from the pool
+    SamplerPoint2D GetSample(int pixelIndex, int sampleNum) const;
+
+protected:
     std::vector<SamplerPoint2D> mSamplePool;
     int mNumSamples;     // e.g., 25
     int mNumSets;        // Number of pixel configurations to pre-bake
 
-public:
-    Sampler(int numSamples);
-    ~Sampler();
-
-    // Securely grab a pre-baked sample offset from the pool
-    SamplerPoint2D GetSample(int pixelIndex, int sampleNum) const;
-
-private:
-    void GenerateSamples();
+protected:
+    virtual void GenerateSamples() = 0;
 };

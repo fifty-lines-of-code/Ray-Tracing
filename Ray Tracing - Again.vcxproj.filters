@@ -94,6 +94,18 @@
     <Filter Include="Source Files\Sampler">
       <UniqueIdentifier>{07f1641b-349a-4f03-b4e8-2313749237df}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Sampler\Regular">
+      <UniqueIdentifier>{ba55fad7-a46e-4108-91ca-bd6daec4fe11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sampler\Regular">
+      <UniqueIdentifier>{4429ce6c-814c-4e0f-bf3c-e28410cb1984}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Sampler\Jittered">
+      <UniqueIdentifier>{48d45d85-9b32-4078-8ff6-d8ab30bf3d07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sampler\Jittered">
+      <UniqueIdentifier>{de1e1ef8-783c-475f-a5e2-1e75e4c0ade8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Ray\Ray.cpp">
@@ -134,6 +146,12 @@
     </ClCompile>
     <ClCompile Include="Source\Sampler\Sampler.cpp">
       <Filter>Source Files\Sampler</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Sampler\Regular\RegularSampler.cpp">
+      <Filter>Source Files\Sampler\Regular</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Sampler\Jittered\JitteredSampler.cpp">
+      <Filter>Source Files\Sampler\Jittered</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -183,6 +201,15 @@
       <Filter>Header Files\Helper</Filter>
     </ClInclude>
     <ClInclude Include="Source\Sampler\Sampler.h">
+      <Filter>Header Files\Sampler</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Sampler\Regular\RegularSampler.h">
+      <Filter>Header Files\Sampler\Regular</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Sampler\Jittered\JitteredSampler.h">
+      <Filter>Header Files\Sampler\Jittered</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Sampler\SamplerHelper.h">
       <Filter>Header Files\Sampler</Filter>
     </ClInclude>
   </ItemGroup>

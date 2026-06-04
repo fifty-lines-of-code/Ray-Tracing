@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include "Ray Tracer/RayTracer.h"
+#include "Sampler/Regular/RegularSampler.h"
+#include "Sampler/Jittered/JitteredSampler.h"
 #include "Scene/SceneFactory.h"
 
 int main()
@@ -11,7 +13,9 @@ int main()
 	SceneFactory::GenerateSingleSphereAndSingleSquareScene(s);
 
 	int noSamples = 25;
+	//RegularSampler sampler(noSamples);
+	JitteredSampler sampler(noSamples);
 
 	RayTracer r;
-	r.RayTrace(640, 480, noSamples, s);
+	r.RayTrace(640, 480, sampler, s);
 }

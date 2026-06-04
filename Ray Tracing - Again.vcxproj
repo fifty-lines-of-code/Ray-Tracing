@@ -134,6 +134,8 @@
     <ClCompile Include="Source\Ray Tracer\RayTracer.cpp" />
     <ClCompile Include="Source\Ray Tracing Image\RayTracingImage.cpp" />
     <ClCompile Include="Source\Ray\Ray.cpp" />
+    <ClCompile Include="Source\Sampler\Jittered\JitteredSampler.cpp" />
+    <ClCompile Include="Source\Sampler\Regular\RegularSampler.cpp" />
     <ClCompile Include="Source\Sampler\Sampler.cpp" />
     <ClCompile Include="Source\Scene\Scene.cpp" />
   </ItemGroup>
@@ -150,7 +152,10 @@
     <ClInclude Include="Source\Ray Tracer\RayTracer.h" />
     <ClInclude Include="Source\Ray Tracing Image\RayTracingImage.h" />
     <ClInclude Include="Source\Ray\Ray.h" />
+    <ClInclude Include="Source\Sampler\Jittered\JitteredSampler.h" />
+    <ClInclude Include="Source\Sampler\Regular\RegularSampler.h" />
     <ClInclude Include="Source\Sampler\Sampler.h" />
+    <ClInclude Include="Source\Sampler\SamplerHelper.h" />
     <ClInclude Include="Source\Scene\Scene.h" />
     <ClInclude Include="Source\Scene\SceneFactory.h" />
     <ClInclude Include="Source\Scene\SceneGeometryFactory.h" />
