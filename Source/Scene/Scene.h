@@ -9,7 +9,7 @@ public:
 	~Scene();
 
 	void AddGeometry(IGeometricObject* _geometry);
-	void RayTrace(const Ray& ray, float& t, const float& tMin, RGBColor& c);
+	void RayTrace(const Ray& ray, double& t, const float& tMin, RGBColor& c);
 
 private:
 	std::vector<IGeometricObject*> mGeometries;

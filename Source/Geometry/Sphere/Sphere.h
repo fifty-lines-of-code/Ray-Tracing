@@ -9,7 +9,7 @@ public:
 	Sphere(Point _p, RGBColor _c, float _r);
 	~Sphere();
 
-	bool HitTest(const Ray& ray, float& t, const float& tMin) override;
+	bool HitTest(const Ray& ray, double& t, const float& tMin) override;
 
 private:
 	Point mCenter;

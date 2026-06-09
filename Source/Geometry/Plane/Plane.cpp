@@ -8,15 +8,15 @@ Plane::Plane(const Point& _p, const Vector& _n, const RGBColor& _c) :
 
 Plane::~Plane() {}
 
-bool Plane::HitTest(const Ray& _r, float& _t, const float& _tMin) {
+bool Plane::HitTest(const Ray& _r, double& _t, const float& _tMin) {
 	bool result = false;
 
-	float normalDotDirection = mNormal.Dot(_r.GetDirection());
+	double normalDotDirection = mNormal.Dot(_r.GetDirection());
 	if (normalDotDirection != 0.f) {
 		Vector rOriginToPCenter = mCenter - _r.GetOrigin();
-		float normalDotOriginToCenter = mNormal.Dot(rOriginToPCenter);
+		double normalDotOriginToCenter = mNormal.Dot(rOriginToPCenter);
 
-		float thisT = normalDotOriginToCenter / normalDotDirection;
+		double thisT = normalDotOriginToCenter / normalDotDirection;
 
 		if (thisT > _tMin && thisT < _t) {
 			result = true;

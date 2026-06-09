@@ -12,7 +12,7 @@ enum class GeometryType {
 class IGeometricObject {
 public:
 	virtual ~IGeometricObject() = default;
-	virtual bool HitTest(const Ray& ray, float& t, const float& tMin) = 0;
+	virtual bool HitTest(const Ray& ray, double& t, const float& tMin) = 0;
 
 	const RGBColor& GetColor() const { return mColor; }
 

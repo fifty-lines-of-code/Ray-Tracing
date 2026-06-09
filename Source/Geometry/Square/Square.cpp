@@ -9,8 +9,8 @@ Square::Square(const Point& _p, const Vector& _n, const RGBColor& _c, float _hal
 
 Square::~Square() {}
 
-bool Square::HitTest(const Ray& _r, float& _t, const float& _tMin) {
-	float incoming_T = _t;
+bool Square::HitTest(const Ray& _r, double& _t, const float& _tMin) {
+	double incoming_T = _t;
 
 	bool result = Plane::HitTest(_r, incoming_T, _tMin);
 

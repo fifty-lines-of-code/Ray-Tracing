@@ -31,7 +31,7 @@ void RayTracer::RayTrace(int width, int height, ISampler& sampler, Scene& scene)
 				// reset color
 				RGBColor sampleColor(0.f);
 				// reset t
-				float t = FLT_MAX;
+				double t = FLT_MAX;
 
 				// calculate subpixel x, y
 				SamplerPoint2D offset = sampler.GetSample(pixelIndex, i);

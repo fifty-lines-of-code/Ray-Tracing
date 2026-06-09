@@ -13,7 +13,7 @@ void Scene::AddGeometry(IGeometricObject* _geometry) {
 	mGeometries.push_back(_geometry);
 }
 
-void Scene::RayTrace(const Ray& ray, float& t, const float& tMin, RGBColor& c) {
+void Scene::RayTrace(const Ray& ray, double& t, const float& tMin, RGBColor& c) {
 	RGBColor color = c;
 
 	for (auto* geometry : mGeometries) {

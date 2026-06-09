@@ -13,7 +13,7 @@ Sphere::Sphere(Point _p, RGBColor _c, float _r) :
 
 Sphere::~Sphere() {}
 
-bool Sphere::HitTest(const Ray& _r, float& _t, const float& _tMin) {
+bool Sphere::HitTest(const Ray& _r, double& _t, const float& _tMin) {
 
 	// geometric solution
 	Vector centerMinusOrigin = mCenter - _r.GetOrigin();
