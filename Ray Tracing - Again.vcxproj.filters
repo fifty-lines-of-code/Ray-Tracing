@@ -49,12 +49,6 @@
     <Filter Include="Source Files\Geometry\Plane">
       <UniqueIdentifier>{66297578-af8c-4207-a3f7-9b4097d8faa5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Math\Normal">
-      <UniqueIdentifier>{f4ac7220-f2d7-4a72-bbf9-b5f7e224270d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Math\Normal">
-      <UniqueIdentifier>{7b7509d2-8bb5-40f5-acf1-f53b3a06337e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Math\RGB Color">
       <UniqueIdentifier>{6388a19a-c697-48fd-b45b-35e849bcafd0}</UniqueIdentifier>
     </Filter>
@@ -91,6 +85,39 @@
     <Filter Include="Source Files\Geometry\Square">
       <UniqueIdentifier>{a0a88e56-3eb9-4155-9d85-bb3a65924911}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Helper">
+      <UniqueIdentifier>{a5732c4f-0db7-4ec3-a695-a2fe4f36493e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Sampler">
+      <UniqueIdentifier>{eb336e21-0b28-4889-a9d5-04aebaed75ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sampler">
+      <UniqueIdentifier>{07f1641b-349a-4f03-b4e8-2313749237df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Sampler\Regular">
+      <UniqueIdentifier>{ba55fad7-a46e-4108-91ca-bd6daec4fe11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sampler\Regular">
+      <UniqueIdentifier>{4429ce6c-814c-4e0f-bf3c-e28410cb1984}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Sampler\Jittered">
+      <UniqueIdentifier>{48d45d85-9b32-4078-8ff6-d8ab30bf3d07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sampler\Jittered">
+      <UniqueIdentifier>{de1e1ef8-783c-475f-a5e2-1e75e4c0ade8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Sampler\Multi-Jitterd">
+      <UniqueIdentifier>{e17ad179-9d7f-453f-b58f-ffb465b74812}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sampler\Multi-Jittered">
+      <UniqueIdentifier>{880038eb-723c-4a17-ba80-f79bfa4fd6e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Sampler\NRooks">
+      <UniqueIdentifier>{b6ea3e28-c272-40ea-9a7b-d8ba2e1ee747}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sampler\NRooks">
+      <UniqueIdentifier>{d19c9cc6-ae69-41d1-8380-17323764be5b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Ray\Ray.cpp">
@@ -107,9 +134,6 @@
     </ClCompile>
     <ClCompile Include="Source\Geometry\Plane\Plane.cpp">
       <Filter>Source Files\Geometry\Plane</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Math\Normal\Normal.cpp">
-      <Filter>Source Files\Math\Normal</Filter>
     </ClCompile>
     <ClCompile Include="Source\Math\RGB Color\RGBColor.cpp">
       <Filter>Source Files\Math\RGB Color</Filter>
@@ -132,6 +156,21 @@
     <ClCompile Include="Source\Geometry\Square\Square.cpp">
       <Filter>Source Files\Geometry\Square</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Sampler\ISampler.cpp">
+      <Filter>Source Files\Sampler</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Sampler\Regular\RegularSampler.cpp">
+      <Filter>Source Files\Sampler\Regular</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Sampler\Jittered\JitteredSampler.cpp">
+      <Filter>Source Files\Sampler\Jittered</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Sampler\Multi-Jittered\MultiJitteredSampler.cpp">
+      <Filter>Source Files\Sampler\Multi-Jittered</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Sampler\NRooks\NRooksSampler.cpp">
+      <Filter>Source Files\Sampler\NRooks</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Ray\Ray.h">
@@ -151,9 +190,6 @@
     </ClInclude>
     <ClInclude Include="Source\Geometry\Plane\Plane.h">
       <Filter>Header Files\Geometry\Plane</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Math\Normal\Normal.h">
-      <Filter>Header Files\Math\Normal</Filter>
     </ClInclude>
     <ClInclude Include="Source\Math\RGB Color\RGBColor.h">
       <Filter>Header Files\Math\RGB Color</Filter>
@@ -178,6 +214,27 @@
     </ClInclude>
     <ClInclude Include="Source\Geometry\Square\Square.h">
       <Filter>Header Files\Geometry\Square</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Helper\Helper.h">
+      <Filter>Header Files\Helper</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Sampler\ISampler.h">
+      <Filter>Header Files\Sampler</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Sampler\Regular\RegularSampler.h">
+      <Filter>Header Files\Sampler\Regular</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Sampler\Jittered\JitteredSampler.h">
+      <Filter>Header Files\Sampler\Jittered</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Sampler\SamplerHelper.h">
+      <Filter>Header Files\Sampler</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Sampler\Multi-Jittered\MultiJitteredSampler.h">
+      <Filter>Header Files\Sampler\Multi-Jitterd</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Sampler\NRooks\NRooksSampler.h">
+      <Filter>Header Files\Sampler\NRooks</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

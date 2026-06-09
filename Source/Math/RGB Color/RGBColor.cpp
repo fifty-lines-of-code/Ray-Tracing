@@ -25,4 +25,23 @@ RGBColor& RGBColor::operator=(const RGBColor& rhs) {
     return *this;
 }
 
+RGBColor& RGBColor::operator+=(const RGBColor& rhs) {
+    r += rhs.r;
+    g += rhs.g;
+    b += rhs.b;
+
+    return *this;
+}
+
+RGBColor& RGBColor::operator/=(float scalar) {
+    if (scalar > 0) {
+        float invScalar = 1 / scalar;
+        r *= invScalar;
+        g *= invScalar;
+        b *= invScalar;
+    }
+
+    return *this;
+}
+
 RGBColor::~RGBColor() {}
