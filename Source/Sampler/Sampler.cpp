@@ -12,7 +12,7 @@ int Sampler::GetNumberOfSamples() const noexcept { return mNumSamples; }
 
 SamplerPoint2D Sampler::GetSample(int pixelIndex, int sampleNum) const {
     // Kevin's trick: Shuffle sets randomly using a modulo jump so adjacent pixels look unique
-    int setID = (pixelIndex * 37) % mNumSets;
+    int setID = (pixelIndex * 103) % mNumSets;
     int globalIndex = (setID * mNumSamples) + sampleNum;
     return mSamplePool[globalIndex];
 }
