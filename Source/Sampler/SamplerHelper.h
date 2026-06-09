@@ -1,7 +1,7 @@
 #pragma once
 
 #include <chrono>
-#include "Sampler.h"
+#include "ISampler.h"
 #include <vector>
 
 class SamplerHelper {

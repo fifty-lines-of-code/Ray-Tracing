@@ -9,11 +9,11 @@ struct SamplerPoint2D {
     SamplerPoint2D(float x, float y) : x(x), y(y) {}
 };
 
-class Sampler {
+class ISampler {
 
 public:
-    Sampler(int numSamples, int numSets);
-    virtual ~Sampler();
+    ISampler(int numSamples, int numSets);
+    virtual ~ISampler();
 
     int GetNumberOfSamples() const noexcept;
     // Securely grab a pre-baked sample offset from the pool

@@ -1,8 +1,8 @@
 #pragma once
 
-#include "../Sampler.h"
+#include "../ISampler.h"
 
-class NRooks : public Sampler {
+class NRooks : public ISampler {
 public:
 	NRooks(int numSamples, int numSets = 100);
 	~NRooks();

@@ -10,7 +10,7 @@ RayTracer::RayTracer() {}
 
 RayTracer::~RayTracer() {}
 
-void RayTracer::RayTrace(int width, int height, Sampler& sampler, Scene& scene) {
+void RayTracer::RayTrace(int width, int height, ISampler& sampler, Scene& scene) {
 	ResetColorArray();
 	SetupColorArray(width, height);
 

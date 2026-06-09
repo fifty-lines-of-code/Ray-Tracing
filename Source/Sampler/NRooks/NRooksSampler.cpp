@@ -1,7 +1,7 @@
 #include "NRooksSampler.h"
 
 NRooks::NRooks(int numSamples, int numSets) :
-	Sampler(numSamples, numSets) 
+	ISampler(numSamples, numSets) 
 {}
 
 NRooks::~NRooks() {}

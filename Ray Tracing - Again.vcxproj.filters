@@ -156,7 +156,7 @@
     <ClCompile Include="Source\Geometry\Square\Square.cpp">
       <Filter>Source Files\Geometry\Square</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Sampler\Sampler.cpp">
+    <ClCompile Include="Source\Sampler\ISampler.cpp">
       <Filter>Source Files\Sampler</Filter>
     </ClCompile>
     <ClCompile Include="Source\Sampler\Regular\RegularSampler.cpp">
@@ -218,7 +218,7 @@
     <ClInclude Include="Source\Helper\Helper.h">
       <Filter>Header Files\Helper</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Sampler\Sampler.h">
+    <ClInclude Include="Source\Sampler\ISampler.h">
       <Filter>Header Files\Sampler</Filter>
     </ClInclude>
     <ClInclude Include="Source\Sampler\Regular\RegularSampler.h">

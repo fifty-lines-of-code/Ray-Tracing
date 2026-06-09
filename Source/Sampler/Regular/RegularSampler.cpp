@@ -1,7 +1,7 @@
 #include "RegularSampler.h"
 
 RegularSampler::RegularSampler(int numSamples, int numSets) :
-    Sampler(numSamples, numSets) 
+    ISampler(numSamples, numSets) 
 {
     GenerateSamples();
 }

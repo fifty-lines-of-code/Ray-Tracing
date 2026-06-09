@@ -1,8 +1,8 @@
 #pragma once
 
-#include "../Sampler.h"
+#include "../ISampler.h"
 
-class MultiJitteredSampler : public Sampler {
+class MultiJitteredSampler : public ISampler {
 public:
 	MultiJitteredSampler(int numSamples, int numSets = 100);
 	~MultiJitteredSampler();

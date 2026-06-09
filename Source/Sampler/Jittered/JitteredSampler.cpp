@@ -3,7 +3,7 @@
 #include "../SamplerHelper.h"
 
 JitteredSampler::JitteredSampler(int numSamples, int numSets) :
-    Sampler(numSamples, numSets)
+    ISampler(numSamples, numSets)
 {
     GenerateSamples();
 }
