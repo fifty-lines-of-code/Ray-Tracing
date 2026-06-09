@@ -26,6 +26,7 @@ void RayTracer::RayTrace(int width, int height, Sampler& sampler, Scene& scene) 
 			RGBColor accumulatedColor(0.f);
 			int pixelIndex = y * width + x;
 
+			// fire a ray per sample
 			for (int i = 0; i < noSamples; ++i) {
 				// reset color
 				RGBColor sampleColor(0.f);

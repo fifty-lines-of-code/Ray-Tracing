@@ -106,6 +106,18 @@
     <Filter Include="Source Files\Sampler\Jittered">
       <UniqueIdentifier>{de1e1ef8-783c-475f-a5e2-1e75e4c0ade8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Sampler\Multi-Jitterd">
+      <UniqueIdentifier>{e17ad179-9d7f-453f-b58f-ffb465b74812}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sampler\Multi-Jittered">
+      <UniqueIdentifier>{880038eb-723c-4a17-ba80-f79bfa4fd6e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Sampler\NRooks">
+      <UniqueIdentifier>{b6ea3e28-c272-40ea-9a7b-d8ba2e1ee747}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sampler\NRooks">
+      <UniqueIdentifier>{d19c9cc6-ae69-41d1-8380-17323764be5b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Ray\Ray.cpp">
@@ -152,6 +164,12 @@
     </ClCompile>
     <ClCompile Include="Source\Sampler\Jittered\JitteredSampler.cpp">
       <Filter>Source Files\Sampler\Jittered</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Sampler\Multi-Jittered\MultiJitteredSampler.cpp">
+      <Filter>Source Files\Sampler\Multi-Jittered</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Sampler\NRooks\NRooksSampler.cpp">
+      <Filter>Source Files\Sampler\NRooks</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -211,6 +229,12 @@
     </ClInclude>
     <ClInclude Include="Source\Sampler\SamplerHelper.h">
       <Filter>Header Files\Sampler</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Sampler\Multi-Jittered\MultiJitteredSampler.h">
+      <Filter>Header Files\Sampler\Multi-Jitterd</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Sampler\NRooks\NRooksSampler.h">
+      <Filter>Header Files\Sampler\NRooks</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

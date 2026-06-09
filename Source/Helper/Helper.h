@@ -11,4 +11,10 @@ public:
         
         return distribution(generator);
     }
+
+    static inline int rand_int(int min, int max) {
+        // The range size must be (max - min + 1) to ensure
+        // the max value is inclusive
+        return min + static_cast<int>(Helper::rand_float() * (max - min + 1));
+    }
 };
