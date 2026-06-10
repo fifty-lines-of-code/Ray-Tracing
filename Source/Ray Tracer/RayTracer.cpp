@@ -36,8 +36,8 @@ void RayTracer::RayTrace(int width, int height, ISampler& sampler, Scene& scene)
 				// calculate subpixel x, y
 				SamplerPoint2D offset = sampler.GetSample(pixelIndex, i);
 
-				float subPixelX = x + offset.x;
-				float subPixelY = y + offset.y;
+				double subPixelX = x + offset.x;
+				double subPixelY = y + offset.y;
 
 				// calculte ray origin
 				CalculateRayOrigin(subPixelX, subPixelY, width, height, origin);
@@ -82,7 +82,7 @@ void RayTracer::SetupColorArray(int width, int height) {
 	mColorArray = new unsigned char[4 * width * height];
 }
 
-void RayTracer::CalculateRayOrigin(float x, float y, int width, int height, Point& o) {
+void RayTracer::CalculateRayOrigin(double x, double y, int width, int height, Point& o) {
 	o.x = x - 0.5 * (width - 1);
 	o.y = 0.5 * (height - 1) - y; // gotta flip the y to ensure image is not rendered upside down
 	o.z = 100.f; // always hard coded

@@ -146,6 +146,7 @@
     <ClInclude Include="Source\Geometry\Plane\Plane.h" />
     <ClInclude Include="Source\Geometry\Sphere\Sphere.h" />
     <ClInclude Include="Source\Geometry\Square\Square.h" />
+    <ClInclude Include="Source\Helper\Constants.h" />
     <ClInclude Include="Source\Helper\Helper.h" />
     <ClInclude Include="Source\Math\MathInclude.h" />
     <ClInclude Include="Source\Math\Point\Point.h" />

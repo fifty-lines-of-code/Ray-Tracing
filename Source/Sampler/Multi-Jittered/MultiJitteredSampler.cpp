@@ -33,7 +33,7 @@ void MultiJitteredSampler::GenerateSamples() {
         for (int p = 0; p < n; p++) {
             for (int q = 0; q < n; q++) {
                 int k = Helper::rand_int(q, n - 1); // Helper to get a random int between q and n-1
-                float t = mSamplePool[j * mNumSamples + p * n + q].x;
+                double t = mSamplePool[j * mNumSamples + p * n + q].x;
                 mSamplePool[j * mNumSamples + p * n + q].x = mSamplePool[j * mNumSamples + p * n + k].x;
                 mSamplePool[j * mNumSamples + p * n + k].x = t;
             }
@@ -44,10 +44,13 @@ void MultiJitteredSampler::GenerateSamples() {
         for (int q = 0; q < n; q++) {
             for (int p = 0; p < n; p++) {
                 int k = Helper::rand_int(p, n - 1); // Helper to get a random int between p and n-1
-                float t = mSamplePool[j * mNumSamples + p * n + q].y;
+                double t = mSamplePool[j * mNumSamples + p * n + q].y;
                 mSamplePool[j * mNumSamples + p * n + q].y = mSamplePool[j * mNumSamples + k * n + q].y;
                 mSamplePool[j * mNumSamples + k * n + q].y = t;
             }
         }
     }
+
+    // map to unit disk
+    MapSamplesToUnitDisk();
 }

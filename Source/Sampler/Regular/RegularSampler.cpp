@@ -22,4 +22,7 @@ void RegularSampler::GenerateSamples() {
             }
         }
     }
+
+    // map to unit disk
+    MapSamplesToUnitDisk();
 }

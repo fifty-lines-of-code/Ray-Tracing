@@ -44,4 +44,7 @@ void NRooks::GenerateSamples() {
             std::swap(mSamplePool[idx1].y, mSamplePool[idx2].y);
         }
     }
+
+    // map to unit disk
+    MapSamplesToUnitDisk();
 }

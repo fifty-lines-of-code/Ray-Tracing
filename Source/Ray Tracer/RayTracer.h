@@ -17,5 +17,5 @@ private:
 private:
 	void ResetColorArray();
 	void SetupColorArray(int width, int height);
-	void CalculateRayOrigin(float x, float y, int width, int height, Point& o);
+	void CalculateRayOrigin(double x, double y, int width, int height, Point& o);
 };
