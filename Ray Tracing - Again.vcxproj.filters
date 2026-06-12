@@ -171,6 +171,9 @@
     <ClCompile Include="Source\Sampler\NRooks\NRooksSampler.cpp">
       <Filter>Source Files\Sampler\NRooks</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Sampler\SamplerManager.cpp">
+      <Filter>Source Files\Sampler</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Ray\Ray.h">
@@ -235,6 +238,12 @@
     </ClInclude>
     <ClInclude Include="Source\Sampler\NRooks\NRooksSampler.h">
       <Filter>Header Files\Sampler\NRooks</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Helper\Constants.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Sampler\SamplerManager.h">
+      <Filter>Header Files\Sampler</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,7 +1,7 @@
 #pragma once
 
 #include "../Math/MathInclude.h"
-#include "../Sampler/ISampler.h"
+#include "../Sampler/SamplerManager.h"
 #include "../Scene/Scene.h"
 
 class RayTracer {
@@ -9,7 +9,7 @@ public:
 	RayTracer();
 	~RayTracer();
 
-	void RayTrace(int width, int height, ISampler& sampler, Scene& scene);
+	void RayTrace(int width, int height, const SamplerManager& samplerManager, Scene& scene);
 
 private:
 	unsigned char* mColorArray = nullptr;
@@ -17,5 +17,5 @@ private:
 private:
 	void ResetColorArray();
 	void SetupColorArray(int width, int height);
-	void CalculateRayOrigin(float x, float y, int width, int height, Point& o);
+	void CalculateRayOrigin(double x, double y, int width, int height, Point& o);
 };

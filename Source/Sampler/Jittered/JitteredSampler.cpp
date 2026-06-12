@@ -26,4 +26,7 @@ void JitteredSampler::GenerateSamples() {
     }
 
     SamplerHelper::RandomizeSamples(mSamplePool, mNumSamples, mNumSets);
+
+    // map to unit disk
+    MapSamplesToUnitDisk();
 }

@@ -139,6 +139,7 @@
     <ClCompile Include="Source\Sampler\NRooks\NRooksSampler.cpp" />
     <ClCompile Include="Source\Sampler\Regular\RegularSampler.cpp" />
     <ClCompile Include="Source\Sampler\ISampler.cpp" />
+    <ClCompile Include="Source\Sampler\SamplerManager.cpp" />
     <ClCompile Include="Source\Scene\Scene.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -146,6 +147,7 @@
     <ClInclude Include="Source\Geometry\Plane\Plane.h" />
     <ClInclude Include="Source\Geometry\Sphere\Sphere.h" />
     <ClInclude Include="Source\Geometry\Square\Square.h" />
+    <ClInclude Include="Source\Helper\Constants.h" />
     <ClInclude Include="Source\Helper\Helper.h" />
     <ClInclude Include="Source\Math\MathInclude.h" />
     <ClInclude Include="Source\Math\Point\Point.h" />
@@ -160,6 +162,7 @@
     <ClInclude Include="Source\Sampler\Regular\RegularSampler.h" />
     <ClInclude Include="Source\Sampler\ISampler.h" />
     <ClInclude Include="Source\Sampler\SamplerHelper.h" />
+    <ClInclude Include="Source\Sampler\SamplerManager.h" />
     <ClInclude Include="Source\Scene\Scene.h" />
     <ClInclude Include="Source\Scene\SceneFactory.h" />
     <ClInclude Include="Source\Scene\SceneGeometryFactory.h" />
