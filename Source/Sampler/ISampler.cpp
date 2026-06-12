@@ -25,6 +25,13 @@ SamplerPoint2D ISampler::GetSample_Disk(int pixelIndex, int sampleNum) const {
     return mDiskSamplePool[globalIndex];
 }
 
+SamplerPoint3D ISampler::GetSample_Hemisphere(int pixelIndex, int sampleNum) const {
+    // Kevin's trick: Shuffle sets randomly using a modulo jump so adjacent pixels look unique
+    int setID = (pixelIndex * 103) % mNumSets;
+    int globalIndex = (setID * mNumSamples) + sampleNum;
+    return mHemisphereSamplePool[globalIndex];
+}
+
 void ISampler::MapSamplesToUnitDisk() {
     size_t size = mSamplePool.size();
     double r, phi; // polar coordinates
@@ -64,5 +71,24 @@ void ISampler::MapSamplesToUnitDisk() {
         double diskX = r * std::cos(phi);
         double diskY = r * std::sin(phi);
         mDiskSamplePool.push_back(SamplerPoint2D(diskX, diskY));
+    }
+}
+
+void ISampler::MapSamplesToHemisphere(const float e) {
+    size_t size = mSamplePool.size();
+
+    mHemisphereSamplePool.clear();
+    mHemisphereSamplePool.reserve(size);
+
+    for (size_t j = 0; j < size; j++) {
+        double cos_phi = std::cos(2.0 * Constants::PI * mSamplePool[j].x);
+        double sin_phi = std::sin(2.0 * Constants::PI * mSamplePool[j].x);
+        double cos_theta = std::pow((1.0 - mSamplePool[j].y), 1.0 / (e + 1.0));
+        double sin_theta = std::sqrt(1.0 - cos_theta * cos_theta);
+        double pu = sin_theta * cos_phi;
+        double pv = sin_theta * sin_phi;
+        double pw = cos_theta;
+
+        mHemisphereSamplePool.push_back(SamplerPoint3D(pu, pv, pw));
     }
 }
