@@ -1,4 +1,4 @@
-# 🧮 Software Ray Tracer 
+# 🧮 Software Ray Tracer (Pinhole Camera Implementation)
 
 > A custom CPU-based ray tracer built from scratch in C++, focused on physically-based light transport, explicit rendering mathematics, and foundational camera + geometry systems.
 
@@ -24,7 +24,7 @@ The project is being developed as a structured progression through core ray trac
 
 ### 📷 Camera System (Pinhole Model)
 
-- Currently implementing pinhole camera projection model
+- Fully implemented pinhole camera projection model
 - Rays generated per pixel through normalized screen space
 - Explicit mapping from image plane → world space rays
 - Field-of-view controlled projection geometry
@@ -59,6 +59,18 @@ The project is being developed as a structured progression through core ray trac
 - Deterministic hit/miss evaluation
 - Distance-based nearest-hit resolution
 - Structured hit record storage for shading pipeline
+
+---
+
+### 💡 Shading Pipeline (Current Stage)
+
+- Basic material response model
+- Surface normal computation at intersection points
+- Light direction evaluation groundwork
+- Foundation for future:
+  - Diffuse
+  - Specular
+  - Path tracing expansion
 
 ---
 
@@ -120,7 +132,7 @@ The project is being developed as a structured progression through core ray trac
 
 ## 🧭 Current Work
 
-- Implementing pinhole camera model 
+- Expanding camera model correctness (FOV + aspect ratio refinement)
 - Improving ray–scene abstraction layer
 - Preparing for multi-sample anti-aliasing (SSAA)
 - Transition toward recursive ray tracing (bounce system)
@@ -146,6 +158,12 @@ This project is being developed with direct reference to established ray tracing
 - **Kevin Suffern — *Ray Tracing from the Ground Up***
   Core reference for the mathematical and architectural foundations of ray tracing, including camera models, geometric primitives, and rendering pipeline structure.
 
+- **Kevin Beason — smallpt (Path Tracer Reference Implementation)**
+  Influential minimalist path tracer used as a conceptual benchmark for understanding physically-based rendering in a compact form.
+
+- **Physically Based Rendering (PBRT) Concepts (Selected Topics)**
+  Selective reference for understanding physically-based rendering principles, sampling theory, and light transport fundamentals.
+
 - **Scratchapixel (Online Reference)**
   Supporting reference for geometric optics, ray–object intersection mathematics, and camera projection models.
 
@@ -163,3 +181,5 @@ This project is built to deeply understand how images are formed from first prin
 - The foundations of physically-based rendering
 
 It complements real-time engine development by focusing on **offline correctness, mathematical clarity, and light transport fundamentals**.
+
+---
