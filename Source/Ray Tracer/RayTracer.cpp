@@ -16,7 +16,8 @@ void RayTracer::RayTrace(int width, int height, const SamplerManager& samplerMan
 
 	float tMin = 0.001f;
 	Point origin;
-	Vector direction = Vector(0, 0, -1).Normalize();
+	Vector direction = Vector(0, 0, -1);
+	direction.Normalize();
 
 	const ISampler& pixelSampler = samplerManager.GetPixelSampler();
 	int noSamples = pixelSampler.GetNumberOfSamples();

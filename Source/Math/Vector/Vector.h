@@ -12,7 +12,9 @@ public:
 	~Vector();
 
 	double Dot(const Vector& _v) const;
-	Vector Normalize() const;
+	void Normalize();
+	Vector Cross(const Vector& rhs) const noexcept;
+
 	Vector operator*(float _s) const;
 
 	float GetLengthSq() const;

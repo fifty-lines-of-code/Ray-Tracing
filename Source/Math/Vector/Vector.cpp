@@ -16,12 +16,20 @@ Vector::Vector(double _x, double _y, double _z) :
 
 Vector::~Vector() {}
 
-Vector Vector::Normalize() const {
+void Vector::Normalize() {
 	if (mLength > 0) {
-		return Vector(x / mLength, y / mLength, z / mLength);
+		x /= mLength;
+		y /= mLength;
+		z /= mLength;
 	}
+}
 
-	return Vector(0.f);
+Vector Vector::Cross(const Vector& rhs) const noexcept {
+	return Vector(
+		(y * rhs.z) - (z * rhs.y), // X = y1*z2 - z1*y2
+		(z * rhs.x) - (x * rhs.z), // Y = z1*x2 - x1*z2
+		(x * rhs.y) - (y * rhs.x)  // Z = x1*y2 - y1*x2
+	);
 }
 
 Vector Vector::operator*(float _s) const {

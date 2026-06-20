@@ -1,4 +1,4 @@
-# 🧮 Software Ray Tracer (Pinhole Camera Implementation)
+# 🧮 Software Ray Tracer
 
 > A custom CPU-based ray tracer built from scratch in C++, focused on physically-based light transport, explicit rendering mathematics, and foundational camera + geometry systems.
 
@@ -11,7 +11,7 @@ This is a **low-level software rendering system** that implements core ray traci
 It focuses on understanding how images are formed mathematically through:
 
 - Ray–scene intersection
-- Camera projection models (pinhole camera)
+- Camera projection models
 - Geometric reasoning in 3D space
 - Light transport and sampling concepts
 - Recursive ray evaluation
@@ -26,7 +26,7 @@ The project is being developed as a structured progression through core ray trac
 
 - Fully implemented pinhole camera projection model
 - Rays generated per pixel through normalized screen space
-- Explicit mapping from image plane → world space rays
+- Explicit mapping from image plane to world space rays
 - Field-of-view controlled projection geometry
 - Deterministic ray generation per pixel sample
 
@@ -36,7 +36,7 @@ The project is being developed as a structured progression through core ray trac
 
 - Primary ray construction per pixel
 - Normalized device coordinate sampling
-- Screen-space → world-space ray transformation
+- Screen-space to world-space ray transformation
 - Jitter-ready architecture for future anti-aliasing (SSAA path)
 
 ---
@@ -59,18 +59,6 @@ The project is being developed as a structured progression through core ray trac
 - Deterministic hit/miss evaluation
 - Distance-based nearest-hit resolution
 - Structured hit record storage for shading pipeline
-
----
-
-### 💡 Shading Pipeline (Current Stage)
-
-- Basic material response model
-- Surface normal computation at intersection points
-- Light direction evaluation groundwork
-- Foundation for future:
-  - Diffuse
-  - Specular
-  - Path tracing expansion
 
 ---
 
@@ -157,12 +145,6 @@ This project is being developed with direct reference to established ray tracing
 
 - **Kevin Suffern — *Ray Tracing from the Ground Up***
   Core reference for the mathematical and architectural foundations of ray tracing, including camera models, geometric primitives, and rendering pipeline structure.
-
-- **Kevin Beason — smallpt (Path Tracer Reference Implementation)**
-  Influential minimalist path tracer used as a conceptual benchmark for understanding physically-based rendering in a compact form.
-
-- **Physically Based Rendering (PBRT) Concepts (Selected Topics)**
-  Selective reference for understanding physically-based rendering principles, sampling theory, and light transport fundamentals.
 
 - **Scratchapixel (Online Reference)**
   Supporting reference for geometric optics, ray–object intersection mathematics, and camera projection models.

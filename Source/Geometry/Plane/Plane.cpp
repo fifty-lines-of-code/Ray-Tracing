@@ -3,8 +3,10 @@
 Plane::Plane(const Point& _p, const Vector& _n, const RGBColor& _c) :
 	IGeometricObject(_c),
 	mCenter(_p),
-	mNormal(_n.Normalize())
-{}
+	mNormal(_n)
+{
+	mNormal.Normalize();
+}
 
 Plane::~Plane() {}
 
